@@ -1,8 +1,17 @@
-import React from 'react'
+import { Outlet } from "react-router"
+import Header from "../header/Header"
+import Footer from "../footer/Footer"
+
 
 const Layout = () => {
   return (
-    <div>Layout</div>
+    <div className="layout">
+      <Header />
+      <main className="main-content">
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
   )
 }
 

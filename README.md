@@ -3,7 +3,7 @@ Marelados es una página de helados, el diseño se adapta tanto a celulares como
 
 ## Estructura base
 
-### Configuración de rutas
+### Configuración de rutas (AppRoutes.jsx + Layout)
 
 #### AppRoutes.jsx
 Dentro de la carpeta routes se encontrará el archivo donde configuraré las rutas de la página: 
@@ -46,6 +46,55 @@ const AppRoutes = () => {
         </Route>
     </Routes>
   )
+}
+```
+
+#### Layout.jsx
+
+```js
+import { Outlet } from "react-router"
+import Header from "../header/Header"
+import Footer from "../footer/Footer"
+
+
+const Layout = () => {
+  return (
+    <div className="layout">
+      <Header />
+      <main className="main-content">
+        <Outlet /> /* acá se rendizaran las páginas hijas */
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
+export default Layout
+```
+
+* Layout.scss:
+```sh
+.layout{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content{
+    flex: 1;
+    margin-top: 70px;
+    padding: 1rem;
+    width: 100%;
+
+    @media (min-width: 577px){
+        padding: 1.5rem;
+        min-width: 1200px;
+        margin: 70px auto 0;
+    }
+
+    @media (min-width: 768px){
+        padding: 2rem;
+    }
 }
 ```
 
