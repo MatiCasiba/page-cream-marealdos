@@ -1,0 +1,13 @@
+.category{
+    animation: fadedIn 0.5s ease;
+
+    .-title{
+        color: #ff6b8b;
+        margin-bottom: 1rem;
+    }
+
+    .-description{
+        color: #667;
+        margin-bottom: 2rem;
+    }
+}
