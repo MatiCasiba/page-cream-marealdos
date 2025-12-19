@@ -1,5 +1,5 @@
 import { useParams } from "react-router"
-import './Category.sass'
+import './Category.scss'
 
 const Category = () => {
 
