@@ -48,8 +48,20 @@ const Footer = () => {
           </ul>
         </div>
 
-        
+        <div className="footer-section">
+          <h4 className="footer-subtitle">Enlaces rápidos</h4>
+          <ul className="quick-links">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/categoria/palitos">Palitos</a></li>
+            <li><a href="/categoria/bombones">Bombones</a></li>
+            <li><a href="/categoria/tortas">Tortas</a></li>
+            <li><a href="/categoria/fammiliares"></a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/#promociones">Promociones</a></li>
+          </ul>
+        </div>
       </div>
+      
     </footer>
   )
 }
