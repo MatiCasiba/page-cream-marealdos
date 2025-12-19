@@ -61,7 +61,25 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      
+
+      <div className="footer-divider"></div>
+
+      <div className="footer-bottom">
+        <div className="footer-bottom__content">
+          <p className="copyrigth">
+            &copy; {currentYear} Heladería Deliciosa. Todos los derechos reservados.
+          </p>
+          <div className="legal-links">
+            <a href="/política-privacidad">Plítica de Privacidad</a>
+            <span className="separator">|</span>
+            <a href="/termino-condiciones">Términos y Condiciones</a>
+          </div>
+        </div>
+        <p className="footer-note">
+          El refugio mas dulce contra el calor
+        </p>
+
+      </div>
     </footer>
   )
 }
