@@ -33,6 +33,22 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
+        <div className="footer-section">
+          <h4 className="footerr-subtitle">Horarios</h4>
+          <ul className="schedule-list">
+            <li className="schedule-item">
+              <span className="schedule-day">Lunes a Sabado</span>
+              <span className="schedule-time">13:00 - 20:30</span>
+            </li>
+            <li className="schedule-item">
+              <span className="schedule-day">Domingo</span>
+              <span className="schedule-time">12:00 - 17:00</span>
+            </li>
+          </ul>
+        </div>
+
+        
       </div>
     </footer>
   )
