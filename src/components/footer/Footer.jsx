@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa"
+import { FaEnvelope, FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhone, FaWhatsapp } from "react-icons/fa"
 
 
 const Footer = () => {
@@ -32,6 +32,24 @@ const Footer = () => {
               <FaWhatsapp className="social-icon" />
             </a>
           </div>
+        </div>
+
+        <div className="footer-section">
+          <h4 className="footer-subtitle">Contacto</h4>
+          <ul>
+            <li className="contact-item">
+              <FaMapMarkerAlt className="contact-icon" />
+              <span>Montes de Oca 5920, José C Paz, Buenoss Aires</span>
+            </li>
+            <li className="contact-item">
+              <FaPhone className="contact-icon" />
+              <span>+54 11 3107748</span>
+            </li>
+            <li className="contact-item">
+              <FaEnvelope className="contact-icon" />
+              <span>gabrielcasiab19@gmail.com</span>
+            </li>
+          </ul>
         </div>
 
         <div className="footer-section">
