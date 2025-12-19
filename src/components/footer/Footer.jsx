@@ -67,10 +67,10 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom__content">
           <p className="copyrigth">
-            &copy; {currentYear} Heladería Deliciosa. Todos los derechos reservados.
+            &copy; {currentYear} Marelados. Todos los derechos reservados.
           </p>
           <div className="legal-links">
-            <a href="/política-privacidad">Plítica de Privacidad</a>
+            <a href="/política-privacidad">Política de Privacidad</a>
             <span className="separator">|</span>
             <a href="/termino-condiciones">Términos y Condiciones</a>
           </div>
