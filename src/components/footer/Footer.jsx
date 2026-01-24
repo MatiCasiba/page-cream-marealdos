@@ -1,5 +1,5 @@
 import { FaEnvelope, FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhone, FaWhatsapp } from "react-icons/fa"
-
+import './Footer.scss'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -10,25 +10,25 @@ const Footer = () => {
 
         <div className="footer-section">
           <div className="footer-logo">
-            <img 
-              src="../../public/logos/marelados.png" 
+            <img
+              src="/logos/marelados.png" 
               alt="marelados logo"
-              className="footer-logoImg" 
+              className="footer-logoImg"
             />
-            <h3 className="footer-title"></h3>
+            <h3 className="footer-title">Marelados</h3>
           </div>
           <p className="footer-desciption">
             Ola de sabor en cada bocado.
           </p>
 
           <div className="social-media">
-            <a href="" target="_blank" rel="" aria-label="Facebook">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebook className="social-icon" />
             </a>
-            <a href="" target="_blank" rel="" aria-label="Instagram">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FaInstagram className="social-icon" />
             </a>
-            <a href="" target="_blank" rel="" aria-label="WhatsApp">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               <FaWhatsapp className="social-icon" />
             </a>
           </div>
@@ -36,10 +36,10 @@ const Footer = () => {
 
         <div className="footer-section">
           <h4 className="footer-subtitle">Contacto</h4>
-          <ul>
+          <ul className="contact-list">
             <li className="contact-item">
               <FaMapMarkerAlt className="contact-icon" />
-              <span>Montes de Oca 5920, José C Paz, Buenoss Aires</span>
+              <span>Montes de Oca 5920, José C Paz, Buenos Aires</span>
             </li>
             <li className="contact-item">
               <FaPhone className="contact-icon" />
@@ -53,10 +53,10 @@ const Footer = () => {
         </div>
 
         <div className="footer-section">
-          <h4 className="footerr-subtitle">Horarios</h4>
+          <h4 className="footer-subtitle">Horarios</h4>
           <ul className="schedule-list">
             <li className="schedule-item">
-              <span className="schedule-day">Lunes a Sabado</span>
+              <span className="schedule-day">Lunes a Sábado</span>
               <span className="schedule-time">13:00 - 20:30</span>
             </li>
             <li className="schedule-item">
@@ -73,7 +73,7 @@ const Footer = () => {
             <li><a href="/categoria/palitos">Palitos</a></li>
             <li><a href="/categoria/bombones">Bombones</a></li>
             <li><a href="/categoria/tortas">Tortas</a></li>
-            <li><a href="/categoria/fammiliares"></a></li>
+            <li><a href="/categoria/familiares">Familiares</a></li>
             <li><a href="/contacto">Contacto</a></li>
             <li><a href="/#promociones">Promociones</a></li>
           </ul>
@@ -88,15 +88,14 @@ const Footer = () => {
             &copy; {currentYear} Marelados. Todos los derechos reservados.
           </p>
           <div className="legal-links">
-            <a href="/política-privacidad">Política de Privacidad</a>
+            <a href="/politica-privacidad">Política de Privacidad</a>
             <span className="separator">|</span>
-            <a href="/termino-condiciones">Términos y Condiciones</a>
+            <a href="/terminos-condiciones">Términos y Condiciones</a>
           </div>
         </div>
         <p className="footer-note">
-          El refugio mas dulce contra el calor
+          El refugio más dulce contra el calor
         </p>
-
       </div>
     </footer>
   )

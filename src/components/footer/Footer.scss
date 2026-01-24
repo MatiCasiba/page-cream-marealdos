@@ -1,0 +1,255 @@
+
+.footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: #fff;
+  padding: 2rem 1rem 1rem;
+  margin-top: auto;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Secciones del footer */
+.footer-section {
+  padding: 0.5rem;
+}
+
+/* Logo y título*/
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.footer-logoImg { 
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-title span {
+  color: #ff6b8b;
+}
+
+.footer-desciption { 
+  color: #bdc3c7;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Redes Sociales */
+.social-media {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: #ecf0f1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: #ff6b8b;
+  transform: translateY(-3px);
+}
+
+/* Subtítulos */
+.footer-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: #ff6b8b;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: #ff6b8b;
+  border-radius: 2px;
+}
+
+/* Listas */
+.contact-list, 
+.schedule-list,
+.quick-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-item,
+.schedule-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  color: #bdc3c7;
+  line-height: 1.5;
+}
+
+.contact-icon {
+  margin-right: 0.8rem;
+  color: #ff6b8b;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+/* Horarios */
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
+
+.schedule-day { 
+  font-weight: 500;
+}
+
+.schedule-time {
+  color: #ff6b8b;
+  font-weight: 600;
+}
+
+/* Enlaces rápidos */
+.quick-links li {
+  margin-bottom: 0.8rem;
+}
+
+.quick-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+  padding: 0.2rem 0;
+}
+
+.quick-links a:hover {
+  color: #ff6b8b;
+  padding-left: 0.5rem;
+}
+
+/* Línea divisoria */
+.footer-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 2rem auto;
+  max-width: 100%;
+}
+
+/* Footer inferior */
+.footer-bottom {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer-bottom__content { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.copyrigth { 
+  color: #95a5a6;
+  font-size: 0.9rem;
+}
+
+.legal-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.legal-links a {
+  color: #95a5a6;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: #ff6b8b;
+}
+
+.separator {
+  color: #7f8c8d;
+}
+
+.footer-note {
+  color: #7f8c8d;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet (≥577px) */
+@media (min-width: 577px) {
+  .footer {
+    padding: 2.5rem 1.5rem 1.5rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    max-width: 100%;
+  }
+  
+  .footer-bottom__content {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto 1rem;
+  }
+}
+
+/* Desktop (≥992px) */
+@media (min-width: 992px) {
+  .footer {
+    padding: 3rem 2rem 1.5rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+  }
+  
+  .footer-section:first-child {
+    grid-column: span 1;
+  }
+}
