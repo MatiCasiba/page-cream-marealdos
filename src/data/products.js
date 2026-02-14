@@ -5,7 +5,9 @@ export const products = [
         description: "",
         price: 700,
         category: "Palitos",
-        image: ""
+        image: "/productos/palitos/palitofrutal-frutilla.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 2,
@@ -13,7 +15,9 @@ export const products = [
         description: "",
         price: 700,
         category: "Palitos",
-        image: ""
+        image: "/productos/palitos/palitofrutal-limon.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 3,
@@ -21,7 +25,9 @@ export const products = [
         description: "",
         price: 700,
         category: "Palitos",
-        image: ""
+        image: "/productos/palitos/palitofrutal-naranja.jpg",
+        featured: true,
+        rating: 4.0
     },
     {
         id: 4,
@@ -29,7 +35,9 @@ export const products = [
         description: "",
         price: 900,
         category: "Palitos",
-        image: ""
+        image: "/productos/palitos/palito-bombon.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 5,
@@ -37,15 +45,19 @@ export const products = [
         description: "",
         price: 800,
         category: "Palitos",
-        image: ""
+        image: "/productos/palitos/palitocremoso-frutilla.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 6,
-        name: "Palito Crema Crema",
+        name: "Palito Crema Americana",
         description: "",
         price: 800,
         category: "Palitos",
-        image: ""
+        image: "/productos/palitos/palitocremoso-americana.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 7,
@@ -53,7 +65,9 @@ export const products = [
         description: "Crema helada de dulce de leche y crema americana, cubierto con baño de repostería",
         price: 1700,
         category: "Bombones",
-        image: ""
+        image: "/productos/bombones/bombon-suizo.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 8,
@@ -61,7 +75,9 @@ export const products = [
         description: "Crema helada con chocolate y crema americana, con corazón de dulce de leche repostero, cubierto con baño de repostería y crocante de maní",
         price: 1900,
         category: "Bombones",
-        image: ""
+        image: "/productos/bombones/bombon-escoces.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 9,
@@ -69,7 +85,9 @@ export const products = [
         description: "Crema helada de dulce de leche cubierto con leche, de baño de repostería y cereal inflado",
         price: 1700,
         category: "Bombones",
-        image: ""
+        image: "/productos/bombones/bombon-crocante.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 10,
@@ -77,7 +95,9 @@ export const products = [
         description: "Crema helada sabor frutilla, con un suave toque de salsa de frutilla, recubierta con baño de repostería",
         price: 1700,
         category: "Bombones",
-        image: ""
+        image: "/productos/bombones/frutezza.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 11,
@@ -85,7 +105,9 @@ export const products = [
         description: "",
         price: 8500,
         category: "Tentaciones",
-        image: ""
+        image: "/productos/tentaciones/chocolate.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 12,
@@ -93,7 +115,9 @@ export const products = [
         description: "",
         price: 8500,
         category: "Tentaciones",
-        image: ""
+        image: "/productos/tentaciones/ch-almendras.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 13,
@@ -101,7 +125,9 @@ export const products = [
         description: "",
         price: 8500,
         category: "Tentaciones",
-        image: ""
+        image: "/productos/tentaciones/cr-cookie.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 14,
@@ -109,7 +135,9 @@ export const products = [
         description: "",
         price: 8500,
         category: "Tentaciones",
-        image: ""
+        image: "/productos/tentaciones/cr-americana.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 15,
@@ -117,7 +145,9 @@ export const products = [
         description: "",
         price: 8500,
         category: "Tentaciones",
-        image: ""
+        image: "/productos/tentaciones/ddleche.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 16,
@@ -125,7 +155,9 @@ export const products = [
         description: "",
         price: 8500,
         category: "Tentaciones",
-        image: ""
+        image: "/productos/tentaciones/ddleche-granizado.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 17,
@@ -133,7 +165,9 @@ export const products = [
         description: "",
         price: 8500,
         category: "Tentaciones",
-        image: ""
+        image: "/productos/tentaciones/frutilla.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 18,
@@ -141,7 +175,9 @@ export const products = [
         description: "",
         price: 8500,
         category: "Tentaciones",
-        image: ""
+        image: "/productos/tentaciones/granizado.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 19,
@@ -149,7 +185,9 @@ export const products = [
         description: "",
         price: 8500,
         category: "Tentaciones",
-        image: ""
+        image: "/productos/tentaciones/limon.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 20,
@@ -157,7 +195,9 @@ export const products = [
         description: "",
         price: 8500,
         category: "Tentaciones",
-        image: ""
+        image: "/productos/tentaciones/vainilla.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 21,
@@ -165,7 +205,9 @@ export const products = [
         description: "Torta con helado de crema americana y dulce de leche, con corazón de dulce de leche y galletitas Mousse trozadas",
         price: 15000,
         category: "Tortas",
-        image: ""
+        image: "/productos/tortas/torta-cookies-mousse.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 22,
@@ -173,7 +215,9 @@ export const products = [
         description: "Torta con helado de crema americana, con corazón de dulce de leche y galletitas",
         price: 15000,
         category: "Tortas",
-        image: ""
+        image: "/productos/tortas/torta-cookies-and-cream.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 23,
@@ -181,7 +225,9 @@ export const products = [
         description: "Torta con helado de chocolate, dulce de leche y crema americana, rellena con dulce de leche y decorada con salsa de chocolate",
         price: 15000,
         category: "Tortas",
-        image: ""
+        image: "/productos/tortas/torta-grido.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 24,
@@ -189,7 +235,9 @@ export const products = [
         description: "Chocolate, Crema Americana, Dulce de Leche",
         price: 16000,
         category: "Familiares",
-        image: ""
+        image: "/productos/familiares/familiar-1.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 25,
@@ -197,7 +245,9 @@ export const products = [
         description: "Frutilla, Crema Americana, Dulce de Leche Granizado",
         price: 16000,
         category: "Familiares",
-        image: ""
+        image: "/productos/familiares/familiar-2.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 26,
@@ -205,7 +255,9 @@ export const products = [
         description: "Frutilla, Vainilla, Granizado",
         price: 16000,
         category: "Familiares",
-        image: ""
+        image: "/productos/familiares/familiar-3.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 27,
@@ -213,7 +265,9 @@ export const products = [
         description: "Chocolate, Vainilla, Dulce de Leche Granizado",
         price: 16000,
         category: "Familiares",
-        image: ""
+        image: "/productos/familiares/familiar-4.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 28,
@@ -221,7 +275,9 @@ export const products = [
         description: "Helado de crema sabor frutilla, chocolate y crema americana",
         price: 1600,
         category: "Postres",
-        image: ""
+        image: "/productos/postres/cassata.jpg",
+        featured: true,
+        rating: 4.9
     },
     {
         id: 29,
@@ -229,7 +285,9 @@ export const products = [
         description: "Crema helada sabor americana cubierta con crocante de maní",
         price: 1600,
         category: "Postres",
-        image: ""
+        image: "/productos/postres/almendrado.jpg",
+        featured: true,
+        rating: 4.9
     }
 
 ] 
