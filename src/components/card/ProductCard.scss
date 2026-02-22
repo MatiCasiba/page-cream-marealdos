@@ -279,3 +279,35 @@
   100% { background-position: -200% 0; }
 }
 
+/* Ajuste para pantallas más pequeñas (menos de 360px) */
+@media(max-width: 360px){
+  .producs-grid{
+    gap: 0.5rem;
+  }
+
+  .produc-card{
+    .product-content{
+      padding: 0.6rem;
+    }
+
+    .produc-name{
+      font-size: 0.9rem;
+    }
+
+    .final-price{
+      font-size: 1rem;
+    }
+
+    .add-to-cart-btn span{
+      display: none; //ocuato el texto "Agregar" en pantallas más pequeñas
+    }
+
+    .add-to-cart-btn {
+      padding: 6px;
+
+      .cart-icon{
+        margin: 0;
+      }
+    }
+  }
+}
