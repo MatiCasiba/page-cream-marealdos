@@ -16,7 +16,7 @@ export const products = [
         price: 700,
         category: "Palitos",
         image: "/productos/palitos/palitofrutal-limon.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     },
     {
@@ -26,7 +26,7 @@ export const products = [
         price: 700,
         category: "Palitos",
         image: "/productos/palitos/palitofrutal-naranja.jpg",
-        featured: true,
+        featured: false,
         rating: 4.0
     },
     {
@@ -66,7 +66,7 @@ export const products = [
         price: 1700,
         category: "Bombones",
         image: "/productos/bombones/bombon-suizo.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     },
     {
@@ -86,7 +86,7 @@ export const products = [
         price: 1700,
         category: "Bombones",
         image: "/productos/bombones/bombon-crocante.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     },
     {
@@ -106,7 +106,7 @@ export const products = [
         price: 8500,
         category: "Tentaciones",
         image: "/productos/tentaciones/chocolate.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     },
     {
@@ -126,7 +126,7 @@ export const products = [
         price: 8500,
         category: "Tentaciones",
         image: "/productos/tentaciones/cr-cookie.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     },
     {
@@ -146,7 +146,7 @@ export const products = [
         price: 8500,
         category: "Tentaciones",
         image: "/productos/tentaciones/ddleche.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     },
     {
@@ -166,7 +166,7 @@ export const products = [
         price: 8500,
         category: "Tentaciones",
         image: "/productos/tentaciones/frutilla.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     },
     {
@@ -196,7 +196,7 @@ export const products = [
         price: 8500,
         category: "Tentaciones",
         image: "/productos/tentaciones/vainilla.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     },
     {
@@ -206,7 +206,7 @@ export const products = [
         price: 15000,
         category: "Tortas",
         image: "/productos/tortas/torta-cookies-mousse.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     },
     {
@@ -226,7 +226,7 @@ export const products = [
         price: 15000,
         category: "Tortas",
         image: "/productos/tortas/torta-grido.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     },
     {
@@ -246,7 +246,7 @@ export const products = [
         price: 16000,
         category: "Familiares",
         image: "/productos/familiares/familiar-2.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     },
     {
@@ -276,7 +276,7 @@ export const products = [
         price: 1600,
         category: "Postres",
         image: "/productos/postres/cassata.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     },
     {
@@ -286,7 +286,7 @@ export const products = [
         price: 1600,
         category: "Postres",
         image: "/productos/postres/almendrado.jpg",
-        featured: true,
+        featured: false,
         rating: 4.9
     }
 
