@@ -5,6 +5,18 @@ import "./Home.scss"
 
 const Home = () => {
   const [featuredProducts, setFeaturedProducts] = useState([])
+  const [visibleProducts, setVisibleProducts] = useState(4)
+  const [showAll, setShowAll] = useState(false)
+  const [isMobile,setIsMobile] = useState(window.innerWidth <= 576)
+
+  //detectar cambios de tamaño de pantalla
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 576)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   // filtrar productos destacados
   useEffect(() => {
@@ -23,6 +35,11 @@ const Home = () => {
   const handleAddToCart = (product) => {
     console.log('Agregar al carrito:', product)
     // lógica a implementar del carrito más adelante
+  }
+
+  const toggleShowAll = () => {
+    setShowAll(!showAll)
+    setVisibleProducts(showAll ? 4 : featuredProducts.length)
   }
 
   return (
@@ -44,28 +61,65 @@ const Home = () => {
 
       {/* grid de productos */}
       {featuredProducts.length > 0 ? (
-        <div className="products-grid">
-          {featuredProducts.map(product => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              onViewDetails={() => handleViewDetails(product.id)}
-              onAddToCart={() => handleAddToCart(product)}
-            />
-          ))}
-        </div>
-      ) : (
-        <div className="no-products">
-          <p>Cargando productos destacados</p>
-        </div>
-      )}
+          <>
+            {/* vista condicional -> scroll en celulares, grid en desktop */}
+            {isMobile ? (
+              // CELULARES: Scroll horizontal
+              <div className="products-scroll-container">
+                <div className="products-scroll">
+                  {featuredProducts.map(product => (
+                    <div key={product.id} className="scroll-item">
+                      <ProductCard
+                        product={product}
+                        onViewDetails={() => handleViewDetails(product.id)}
+                        onAddToCart={() => handleAddToCart(product)}
+                      />
+                    </div>
+                  ))}
+                </div>
+                {/* indicador de scroll */}
+                <div className="scroll-indicator">
+                  <span className="scroll-hint">Desliza para ver más →</span>
+                </div>
+              </div>
+            ) : (
+              // DESKTOP: Grid con ver más/ver menos
+              <>
+                <div className="products-grid">
+                  {featuredProducts.slice(0, visibleProducts).map(product => (
+                    <ProductCard
+                      key={product.id}
+                      product={product}
+                      onViewDetails={() => handleViewDetails(product.id)}
+                      onAddToCart={() => handleAddToCart(product)}
+                    />
+                  ))}
+                </div>
 
-      {/* Boton parra ver todos los productos */}
-        <div className="view-all-container">
-          <button className="view-all-btn">
-            Ver todos los productos
-          </button>
-        </div>
+                {/* botón Ver más / Ver menos (solo si hay más de 4 productos) */}
+                {featuredProducts.length > 4 && (
+                  <div className="view-toggle-container">
+                    <button 
+                      className="view-toggle-btn"
+                      onClick={toggleShowAll}
+                    >
+                      {showAll ? (
+                        <>Ver menos productos <span className="arrow">↑</span></>
+                      ) : (
+                        <>Ver todos los productos ({featuredProducts.length - 4} más) <span className="arrow">↓</span></>
+                      )}
+                    </button>
+                  </div>
+                )}
+              </>
+            )}
+          </>
+        ) : (
+          <div className="no-products">
+            <p>Cargando productos destacados</p>
+          </div>
+        )}
+
       </section>
 
       {/* Sección de categorías */}
