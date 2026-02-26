@@ -12,8 +12,9 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem 1rem 1rem;
 }
 
 /* Secciones del footer */
@@ -251,5 +252,10 @@
   
   .footer-section:first-child {
     grid-column: span 1;
+  }
+
+  .footer-bottom__content {
+    max-width: 1200px;
+    margin: 0 auto 1rem;
   }
 }
