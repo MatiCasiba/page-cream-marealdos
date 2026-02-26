@@ -135,7 +135,7 @@ export const products = [
         description: "",
         price: 8500,
         category: "Tentaciones",
-        image: "/productos/tentaciones/cr-americana.jpg",
+        image: "/productos/tentaciones/cr-americana.png",
         featured: true,
         rating: 4.9
     },
