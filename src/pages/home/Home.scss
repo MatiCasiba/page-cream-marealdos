@@ -4,62 +4,6 @@
     max-width: 100%;
 }
 
-/* banner seccion */
-.banner-section{
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-.banner{
-    background: linear-gradient(135deg, rgba(255, 107, 139, 0.9), rgba(255, 71, 87, 0.9));
-    color: white;
-    padding: 2rem 1rem;
-    border-radius: 12px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-
-    &::before{
-        content: '';
-        position: absolute;
-        bottom: -20px;
-        left: 0;
-        right: 0;
-        height: 40px;
-        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23ffffff'/%3E%3C/svg%3E");
-        background-size: cover;
-    }
-}
-
-.banner-title{
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
-.banner-subtitle{
-    font-family: 1rem;
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
-}
-
-.banner-cta{
-    background: white;
-    color: #ff6b8b;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 25px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.33 ease;
-
-    &:hover{
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
-    }
-}
-
 /* seccion de productos destacados */
 .featured-products{
     margin-bottom: 3rem;
@@ -117,42 +61,6 @@
         background: #ff6b8b;
         color: white;
         transform: translateY(-2px);
-    }
-}
-
-/* sección categorias */
-.categories-preview{
-    margin-bottom: 2rem;
-}
-
-.categories-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.category-card{
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-
-    &:hover{
-        transform: translateY(-5px);
-    }
-
-    h3{
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-        color: #2c3e50;
-    }
-
-    p{
-        font-size: 0.9rem;
-        color: #ff6b8b;
-        font-weight: 600;
     }
 }
 

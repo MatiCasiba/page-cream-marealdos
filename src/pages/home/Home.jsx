@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import ProductCard from "../../components/card/ProductCard"
 import { products } from "../../data/products"
 import "./Home.scss"
+import Banner from "../../components/banner/Banner"
 
 const Home = () => {
   const [featuredProducts, setFeaturedProducts] = useState([])
@@ -46,11 +47,7 @@ const Home = () => {
     <div className="home">
       {/* sección del banner */}
       <section className="banner-section">
-        <div className="banner">
-          <h1 className="banner-title">Marelados</h1>
-          <p className="banner-subtitle">Ola de sabor en cada bocado</p>
-          <button className="banner-cta">Ver productos</button>
-        </div>
+        <Banner />
       </section>
 
       <section className="featured-products">
@@ -121,35 +118,6 @@ const Home = () => {
         )}
 
       </section>
-
-      {/* Sección de categorías */}
-      <section className="categories-preview">
-        <h2 className="section-title">Nuestras Categorías</h2>
-        <div className="categories-grid">
-          <div className="category-card">
-            <h3>Palitos</h3>
-            <p>Desde $800</p>
-          </div>
-          <div className="category-card">
-            <h3>Bombones</h3>
-            <p>Desde $1200</p>
-          </div>
-          <div className="category-card">
-            <h3>Tortas</h3>
-            <p>Desde $17000</p>
-          </div>
-        </div>
-      </section>
-
-      {/* <div className="placeholder">
-        <h2>Banner</h2>
-        <p>Imagen promocional de helados</p>
-      </div>
-
-      <div className="placeholder">
-        <h2>Productos destacados</h2>
-        <p>grid de tarjetas de productos</p>
-      </div> */}
     </div>
   )
 }
