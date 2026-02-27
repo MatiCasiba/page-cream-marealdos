@@ -101,7 +101,6 @@ const Banner = () => {
               onClick={() => handleBannerClick(banner.link)} // banner clickeable
               style={{ backgroundImage: `url(${banner.image})` }}
             >
-              <div className="banner-overlay"></div>
 
               {/* contenido del banner */}
               <div className="banner-content">
