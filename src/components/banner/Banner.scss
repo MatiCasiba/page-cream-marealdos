@@ -191,3 +191,64 @@
   0%, 100% { transform: translateX(0); }
   50% { transform: translateX(5px); }
 }
+
+/* === Estilos nuevos === */
+
+/* versión móvil: solo imagen */
+.banner-slide-mobile {
+  cursor: pointer;
+  
+  .banner-content {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* evita clics en texto invisible */
+  }
+  
+  /* feedback visual al tocar */
+  &:active {
+    transform: scale(0.98);
+    transition: transform 0.2s ease;
+  }
+  
+  /* overlay más sutil en móvil */
+  .banner-overlay {
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.1)
+    );
+  }
+}
+
+/* versión desktop: hover reveal */
+.banner-slide-desktop {
+  cursor: pointer;
+  
+  .banner-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+  }
+  
+  &:hover {
+    .banner-content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .banner-overlay {
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.5)
+      );
+    }
+  }
+}
+
+/* ajuste del overlay para que sea más suave */
+.banner-overlay {
+  transition: background 0.4s ease;
+}

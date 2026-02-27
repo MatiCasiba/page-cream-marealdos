@@ -9,11 +9,24 @@ import "swiper/css/navigation"
 import "swiper/css/effect-fade"
 
 import "./Banner.scss"
+import { useNavigate } from "react-router"
 
 const Banner = () => {
   const [banners, setBanners] = useState([])
   const [loading, setLoading] = useState(true)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 576)
   const swiperRef = useRef(null)
+  const navigate = useNavigate()
+
+  //detecta cambios de tamaño de pantalla
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 576)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize',handleResize)
+  })
 
   // simulo carga de banners (después vendrá de API)
   useEffect(() => {
@@ -29,7 +42,7 @@ const Banner = () => {
       },
       {
         id: 2,
-        image: "/banners/banner2.jpg",
+        image: "/banner/banner-2.png",
         title: "Bombones Premium",
         subtitle: "Los más vendidos de la temporada",
         buttonText: "Descubrir",
@@ -37,11 +50,11 @@ const Banner = () => {
       },
       {
         id: 3,
-        image: "/banners/banner3.jpg",
-        title: "Tentaciones",
+        image: "/banner/banner-3.png",
+        title: "Tortas",
         subtitle: "Para compartir en familia",
         buttonText: "Ver más",
-        link: "/categoria/tentaciones"
+        link: "/categoria/tortas"
       }
     ]
     
@@ -51,7 +64,7 @@ const Banner = () => {
 
   // navegar al hacer clic en el botón
   const handleBannerClick = (link) => {
-    window.location.href = link
+    navigate(link) // uso navigate en lugar de window.location
   }
 
   if (loading) {
@@ -75,7 +88,7 @@ const Banner = () => {
           clickable: true,
           dynamicBullets: true
         }}
-        navigation={true}
+        navigation={!isMobile} //solo flechas en desktop
         loop={true}
         grabCursor={true}
         touchRatio={1.5}
@@ -84,16 +97,22 @@ const Banner = () => {
         {banners.map((banner) => (
           <SwiperSlide key={banner.id}>
             <div 
-              className="banner-slide"
+              className={`banner-slide ${isMobile ? "banner-slide-mobile" : "banner-slide-desktop"}`}
+              onClick={() => handleBannerClick(banner.link)} // banner clickeable
               style={{ backgroundImage: `url(${banner.image})` }}
             >
               <div className="banner-overlay"></div>
+
+              {/* contenido del banner */}
               <div className="banner-content">
                 <h2 className="banner-title">{banner.title}</h2>
                 <p className="banner-subtitle">{banner.subtitle}</p>
                 <button 
                   className="banner-button"
-                  onClick={() => handleBannerClick(banner.link)}
+                  onClick={(e) => {
+                    e.stopPropagation() // evita doble navegación
+                    handleBannerClick(banner.link)
+                  }}
                 >
                   {banner.buttonText}
                 </button>
@@ -104,10 +123,12 @@ const Banner = () => {
       </Swiper>
 
       {/* indicador de swipe en celulares */}
-      <div className="swipe-indicator">
-        <span className="swipe-text">Desliza para ver más</span>
-        <span className="swipe-arrow">→</span>
-      </div>
+      {isMobile && (
+        <div className="swipe-indicator">
+          <span className="swipe-text">Desliza para ver más</span>
+          <span className="swipe-arrow">→</span>
+        </div>
+      )}
     </section>
   )
 }
