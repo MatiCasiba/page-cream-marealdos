@@ -22,7 +22,7 @@ const Contact = () => {
     e.preventDefault()
 
     //número de WhatsApp (con código del país, sin +)
-    const numero = "5461118645"
+    const numero = "5491161118645"
 
     //armado del mensaje
     const mensaje = `*Nuevo mensaje desde la web*%0A%0A
@@ -139,7 +139,7 @@ const Contact = () => {
           <div className="info-card whatsapp-direct">
             <h3>📱 WhatsApp directo</h3>
             <a 
-              href="https://wa.me/541161118645" 
+              href="https://wa.me/5491161118645" 
               target="_blank" 
               rel="noopener noreferrer"
               className="whatsapp-link"
