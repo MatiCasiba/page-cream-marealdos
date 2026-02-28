@@ -52,7 +52,7 @@ const Header = () => {
   ]
 
   return (
-    <header className={`header ${scrolled ? "header-scrolled" : ""}`}>
+    <header className={`header ${scrolled ? "header-scrolled" : ""} ${isMenuOpen ? "menu-open" : ""}`}>
       <div className="header-container">
         {/* Logo */}
         <Link to="/" className="logo" onClick={closeMenu}>

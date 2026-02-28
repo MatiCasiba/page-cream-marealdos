@@ -303,3 +303,37 @@
     opacity: 1;
   }
 }
+
+/* ===== Animación del logo y menú ===== */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* menú cerrado: logo a izquierda, botón a derecha */
+.header:not(.menu-open) .header-container {
+  justify-content: space-between;
+}
+
+/* menú abierto -> todo a la derecha*/
+.header.menu-open .header-container {
+  justify-content: flex-end;
+  gap: 4rem; /* ← espacio entre logo y botón */
+}
+
+.header.menu-open {
+  .logo {
+    gap: 0.8rem;
+  }
+  
+  .menu-toggle {
+    margin-left: 0.2rem; /* pequeño espacio extra antes del botón */
+  }
+}
+
+/* transiciones suaves */
+.logo, .menu-toggle, .header-container {
+  transition: all 0.3s ease;
+}
