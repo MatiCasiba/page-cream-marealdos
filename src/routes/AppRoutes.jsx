@@ -3,6 +3,7 @@ import Layout from "../components/layout/Layout"
 import Home from "../pages/home/Home"
 import Category from "../pages/category/Category"
 import Contact from "../pages/contact/Contact"
+import ProducDetail from "../pages/product/ProducDetail"
 
 
 const AppRoutes = () => {
@@ -12,6 +13,7 @@ const AppRoutes = () => {
             <Route index element={<Home />} />
             <Route path="categoria/:categoryID" element={<Category />} />
             <Route path="contacto" element={<Contact />} />
+            <Route path="producto/:productId" element={<ProducDetail />} />
 
             <Route path="*" element={
                 <div style={{

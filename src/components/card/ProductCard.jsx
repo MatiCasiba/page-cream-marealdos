@@ -1,7 +1,9 @@
 import { FaEye, FaShoppingCart, FaStar } from "react-icons/fa"
+import { useNavigate } from "react-router"
 import './ProductCard.scss' 
 
 const ProductCard = ({ product, onViewDetails, onAddToCart }) => {
+  const navigate = useNavigate()
   // Si no hay producto, muestra un skeleton
   if (!product) {
     return (
@@ -33,7 +35,11 @@ const ProductCard = ({ product, onViewDetails, onAddToCart }) => {
   const hasDiscount = discount > 0
 
   return (
-    <div className="product-card">
+    <div 
+      className="product-card"
+      onClick={() => navigate(`/producto/${id}`)}
+      style={{cursor: 'pointer'}}
+    >
       {/* badges */}
       <div className="product-badges">
         {featured && <span className="badge badge-featured">Destacado</span>}
