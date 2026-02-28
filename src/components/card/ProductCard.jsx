@@ -101,13 +101,14 @@ const ProductCard = ({ product, onViewDetails, onAddToCart }) => {
             <span className="final-price">${finalPrice.toFixed(2)}</span>
           </div>
           
-          <button 
+          {/* Agrego el botón card más adelante */}
+          {/* <button 
             className="add-to-cart-btn"
             onClick={() => onAddToCart && onAddToCart(product)}
           >
             <FaShoppingCart className="cart-icon" />
             <span>Agregar</span>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
