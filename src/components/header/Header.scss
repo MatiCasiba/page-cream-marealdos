@@ -40,10 +40,10 @@
 }
 
 .logo-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #ff6b8b;
-  display: none; /* oculto en celulares */
+  display: block;
 }
 
 /* botón menú hamburguesa */
@@ -198,10 +198,6 @@
 
 /* tablet (≥577px) */
 @media (min-width: 577px) {
-  .logo-text {
-    display: block; /* Mostrar texto del logo */
-  }
-  
   .nav-menu {
     width: 320px;
   }
