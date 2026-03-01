@@ -1,4 +1,4 @@
-import { FaEnvelope, FaFacebook, FaInstagram, FaMapMarkerAlt, FaPhone, FaWhatsapp } from "react-icons/fa"
+import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaPhone, FaWhatsapp } from "react-icons/fa"
 import './Footer.scss'
 
 const Footer = () => {
@@ -22,32 +22,32 @@ const Footer = () => {
           </p>
 
           <div className="social-media">
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
               <FaFacebook className="social-icon" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
               <FaInstagram className="social-icon" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
               <FaWhatsapp className="social-icon" />
             </a>
           </div>
         </div>
 
         <div className="footer-section">
-          <h4 className="footer-subtitle">Contacto</h4>
+          <h4 className="footer-subtitle">Desarrollador</h4>
           <ul className="contact-list">
             <li className="contact-item">
-              <FaMapMarkerAlt className="contact-icon" />
-              <span>Montes de Oca 5920, José C Paz, Buenos Aires</span>
+              <FaGithub className="contact-icon" />
+              <span><a href="https://github.com/MatiCasiba" target="_blank" rel="noopener noreferrer">MatiCasiba</a></span>
             </li>
             <li className="contact-item">
               <FaPhone className="contact-icon" />
-              <span>+54 11 3107748</span>
+              <span>+54 9 11 3107748</span>
             </li>
             <li className="contact-item">
               <FaEnvelope className="contact-icon" />
-              <span>gabrielcasiab19@gmail.com</span>
+              <span>casibagabriel@gmail.com</span>
             </li>
           </ul>
         </div>
